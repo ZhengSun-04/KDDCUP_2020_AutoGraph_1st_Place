@@ -19,9 +19,9 @@ class GCN(torch.nn.Module):
     def __init__(self, categories_nums, num_layers=2, hidden=64,  features_num=16, num_class=2, node_num=10000):
         super(GCN, self).__init__()
         embed_size = 8
-        self.dropout_p = 0.1
+        self.dropout_p = 0.05
         
-        id_embed_size = 8
+        id_embed_size = 16
         
         self.id_embedding = Embedding(categories_nums[0], id_embed_size)
         
@@ -99,7 +99,7 @@ class GCNModel:
         self.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
         
         self.num_boost_round = num_boost_round
-        self.early_stopping_rounds = 100
+        self.early_stopping_rounds = 200
         self.best_iteration = best_iteration
         self.learning_rate = 0.005
         self.echo_epochs = 1
