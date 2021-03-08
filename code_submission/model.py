@@ -227,7 +227,7 @@ class Model:
         
         model_type_list = ['sage','gat','tagc','gcn']
         
-        repeat = 3
+        repeat = 5
         model_name_list = [f'{model_type_list[i]}{i+len(model_type_list)*j}' for j in range(repeat) for i in range(len(model_type_list))]
         model_type_list = model_type_list*repeat
         
