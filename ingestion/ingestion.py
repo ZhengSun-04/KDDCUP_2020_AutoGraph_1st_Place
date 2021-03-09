@@ -241,7 +241,7 @@ def main():
     
 #    for file in ['a','b','c','d','e']:
 #    for file in ['a']:
-    for file in ['c']:
+    for file in ['b']:
         LOGGER.info(f'===== Start Dataset {file}')
         root_dir = _here(os.pardir)
         args.dataset_dir = join(root_dir, "data/"+file+"/train.data")
