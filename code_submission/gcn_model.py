@@ -265,10 +265,10 @@ class GCNModel:
 
     @timeclass('GCNModel')
     def get_train_and_valid(self,table,train_valid_idx,valid_idx,seed=None):
-        #划分训练集和验证集
+        #divide train and valid dataset 
         valid_model_data = ModelData()
 
-        #获取gcn数据
+        #get gcn
         data = table.gcn_data.clone()
         num_nodes = data.y.shape[0]
         
@@ -286,10 +286,10 @@ class GCNModel:
     
     @timeclass('GCNModel')
     def get_train(self,table,train_idx,test_idx,seed=None):
-        #划分训练集和测试集
+        #divide train and test
         model_data = ModelData()
         
-        #获取gcn数据
+        #get gcn
         data = table.gcn_data.clone()
         num_nodes = data.y.shape[0]
         
